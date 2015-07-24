@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindowClass</class>
+ <widget class="QMainWindow" name="mainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1140</width>
+    <height>814</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>mainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="controlPanelLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetFixedSize</enum>
+      </property>
+      <item>
+       <widget class="QLabel" name="logoLable">
+        <property name="minimumSize">
+         <size>
+          <width>260</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>260</width>
+          <height>145</height>
+         </size>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>logo</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="centrlWidgetLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetFixedSize</enum>
+      </property>
+      <item>
+       <widget class="QVTKWidget" name="originalQVTKViewer">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QVTKWidget" name="resultQVTKViewer">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1140</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="action_Open"/>
+    <addaction name="action_Open_3DImage"/>
+    <addaction name="action_OpenDICOM"/>
+    <addaction name="action_Save"/>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>点运算(&amp;P)</string>
+    </property>
+    <addaction name="action_Color2Gray"/>
+    <addaction name="action_ColorHist"/>
+    <addaction name="action_GrayHist"/>
+    <addaction name="action_HistgramEqualization"/>
+    <addaction name="action_Interpolation"/>
+    <addaction name="action_SingleChannel"/>
+   </widget>
+   <widget class="QMenu" name="menu_G">
+    <property name="title">
+     <string>图像变化(&amp;T)</string>
+    </property>
+    <widget class="QMenu" name="menu_O_2">
+     <property name="title">
+      <string>正交变化(&amp;O)</string>
+     </property>
+     <addaction name="action_Fourier"/>
+    </widget>
+    <addaction name="action_Geometry"/>
+    <addaction name="menu_O_2"/>
+    <addaction name="action_Morphology"/>
+   </widget>
+   <widget class="QMenu" name="menu_I">
+    <property name="title">
+     <string>图像滤波(&amp;I)</string>
+    </property>
+    <addaction name="action_MeanFilter"/>
+    <addaction name="action_GaussianFilter"/>
+    <addaction name="action_LaplacianFilter"/>
+    <addaction name="action_BilateralFilter"/>
+    <addaction name="action_CurvatureAnisotropicDiffusionFilter"/>
+   </widget>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>图像分割(&amp;S)</string>
+    </property>
+    <addaction name="action_RegionGrowSeg"/>
+    <addaction name="action_WatershedSeg"/>
+    <addaction name="action_PEDSeg"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>边缘与轮廓(&amp;E)</string>
+    </property>
+    <addaction name="action_Edge"/>
+   </widget>
+   <widget class="QMenu" name="menu_R">
+    <property name="title">
+     <string>图像配准(&amp;R)</string>
+    </property>
+    <addaction name="action_Registration_2D"/>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>图像可视化(&amp;V)</string>
+    </property>
+    <addaction name="action_VolumeRender"/>
+    <addaction name="action_SurfaceRender"/>
+   </widget>
+   <widget class="QMenu" name="menu_A">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="action_About"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_P"/>
+   <addaction name="menu_G"/>
+   <addaction name="menu_I"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_S"/>
+   <addaction name="menu_R"/>
+   <addaction name="menu_V"/>
+   <addaction name="menu_A"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Open"/>
+   <addaction name="separator"/>
+   <addaction name="action_Save"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="imageprocess.qrc">
+     <normaloff>:/images/images/open.png</normaloff>:/images/images/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开二维图像(&amp;2D)</string>
+   </property>
+   <property name="toolTip">
+    <string>打开</string>
+   </property>
+  </action>
+  <action name="action_Dilation">
+   <property name="text">
+    <string>膨胀(&amp;D)</string>
+   </property>
+  </action>
+  <action name="action_Erosion">
+   <property name="text">
+    <string>腐蚀(&amp;E)</string>
+   </property>
+  </action>
+  <action name="action_MeanFilter">
+   <property name="text">
+    <string>中值滤波(&amp;M)</string>
+   </property>
+   <property name="toolTip">
+    <string>中值滤波</string>
+   </property>
+  </action>
+  <action name="action_GaussianFilter">
+   <property name="text">
+    <string>高斯滤波(&amp;G)</string>
+   </property>
+  </action>
+  <action name="action_LaplacianFilter">
+   <property name="text">
+    <string>拉普拉斯滤波(&amp;L)</string>
+   </property>
+  </action>
+  <action name="action_Geometry">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>几何变化(&amp;G)</string>
+   </property>
+  </action>
+  <action name="action_Morphology">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>形态学变化(&amp;M)</string>
+   </property>
+  </action>
+  <action name="action_Threshold">
+   <property name="text">
+    <string>阈值变化(&amp;T)</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="icon">
+    <iconset resource="imageprocess.qrc">
+     <normaloff>:/images/images/save.png</normaloff>:/images/images/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存(&amp;S)</string>
+   </property>
+   <property name="toolTip">
+    <string>保存</string>
+   </property>
+  </action>
+  <action name="action_Color2Gray">
+   <property name="text">
+    <string>彩色图转灰度图(&amp;C_G)</string>
+   </property>
+  </action>
+  <action name="action_HistgramEqualization">
+   <property name="text">
+    <string>直方图均衡化(&amp;E)</string>
+   </property>
+  </action>
+  <action name="action_ColorHist">
+   <property name="text">
+    <string>彩色图直方图(&amp;H_C)</string>
+   </property>
+  </action>
+  <action name="action_Interpolation">
+   <property name="text">
+    <string>插值运算(&amp;I)</string>
+   </property>
+  </action>
+  <action name="action_SingleChannel">
+   <property name="text">
+    <string>单通道图(&amp;S)</string>
+   </property>
+  </action>
+  <action name="action_OpenOperation">
+   <property name="text">
+    <string>开操作(&amp;O)</string>
+   </property>
+  </action>
+  <action name="action_CloseOperation">
+   <property name="text">
+    <string>闭操作(&amp;C)</string>
+   </property>
+  </action>
+  <action name="action_RegionGrowSeg">
+   <property name="text">
+    <string>区域生长(&amp;R)</string>
+   </property>
+  </action>
+  <action name="action_WatershedSeg">
+   <property name="text">
+    <string>分水岭(&amp;W)</string>
+   </property>
+  </action>
+  <action name="action_BilateralFilter">
+   <property name="text">
+    <string>双边滤波(&amp;B)</string>
+   </property>
+  </action>
+  <action name="action_GrayHist">
+   <property name="text">
+    <string>灰度图直方图(&amp;H_G)</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+  </action>
+  <action name="action_Fourier">
+   <property name="text">
+    <string>傅里叶变化(&amp;F)</string>
+   </property>
+  </action>
+  <action name="action_CurvatureAnisotropicDiffusionFilter">
+   <property name="text">
+    <string>曲线各向异性滤波(&amp;C)</string>
+   </property>
+  </action>
+  <action name="action_Open_3DImage">
+   <property name="text">
+    <string>打开三维图像(&amp;3D)</string>
+   </property>
+  </action>
+  <action name="action_Edge">
+   <property name="text">
+    <string>边缘检测(&amp;E)</string>
+   </property>
+  </action>
+  <action name="action_OpenDICOM">
+   <property name="text">
+    <string>打开DICOM图像(&amp;DICOM)</string>
+   </property>
+  </action>
+  <action name="action_VolumeRender">
+   <property name="text">
+    <string>体绘制(&amp;V)</string>
+   </property>
+  </action>
+  <action name="action_SurfaceRender">
+   <property name="text">
+    <string>面绘制(&amp;S)</string>
+   </property>
+  </action>
+  <action name="action_Registration_2D">
+   <property name="text">
+    <string>二维配准(&amp;R_2D)</string>
+   </property>
+  </action>
+  <action name="action_PEDSeg">
+   <property name="text">
+    <string>PED分割(&amp;PED)</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="imageprocess.qrc"/>
+ </resources>
+ <connections/>
+</ui>

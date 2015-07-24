@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dicomProcess</class>
+ <widget class="QWidget" name="dicomProcess">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>354</width>
+    <height>453</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="widget_5" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-5</x>
+     <y>4</y>
+     <width>351</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <widget class="QWidget" name="widget_4" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>38</y>
+      <width>341</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="imgSliceLabel">
+     <property name="geometry">
+      <rect>
+       <x>241</x>
+       <y>20</y>
+       <width>72</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>imgSlice</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>22</y>
+       <width>72</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>深度(bit)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="imgLengthLabel">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>0</y>
+       <width>72</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>imgLength</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>72</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>长度(pix)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>161</x>
+       <y>20</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>切片数(张)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="imgDepthLabel">
+     <property name="geometry">
+      <rect>
+       <x>82</x>
+       <y>22</y>
+       <width>72</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>imgDepth</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>94</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>文件类型</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="fileTypeLabel">
+     <property name="geometry">
+      <rect>
+       <x>82</x>
+       <y>94</y>
+       <width>72</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>fileType</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>162</x>
+       <y>67</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>压缩方式</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="compressTypeLabel">
+     <property name="geometry">
+      <rect>
+       <x>232</x>
+       <y>67</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>compressType</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>162</x>
+       <y>0</y>
+       <width>72</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>宽度(pix)</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="imgWidthLabel">
+     <property name="geometry">
+      <rect>
+       <x>241</x>
+       <y>0</y>
+       <width>72</width>
+       <height>15</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>imgWidth</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="manufactureLabel">
+     <property name="geometry">
+      <rect>
+       <x>233</x>
+       <y>93</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>manufacture</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>163</x>
+       <y>93</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>厂商</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="hospitalLabel">
+     <property name="geometry">
+      <rect>
+       <x>79</x>
+       <y>137</y>
+       <width>231</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>hospital</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>137</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>医院</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pixelTypeLabel">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>44</y>
+       <width>72</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>pixelType</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_20">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>44</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>像素类型</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="byteOrderLabel">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>43</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>byteOrder</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="imgOriginLabel">
+     <property name="geometry">
+      <rect>
+       <x>84</x>
+       <y>70</y>
+       <width>72</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>imgOrigin</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_21">
+     <property name="geometry">
+      <rect>
+       <x>161</x>
+       <y>43</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>字节顺序</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_22">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>70</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>原点位置</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pixelSpacingLabel">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>116</y>
+       <width>231</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>pixSpacing</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>114</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>像素间隔</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>229</y>
+      <width>291</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>-10</x>
+       <y>0</y>
+       <width>171</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <widget class="QLineEdit" name="ageLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>48</x>
+        <y>112</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="nameLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>49</x>
+        <y>39</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="sexLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>49</x>
+        <y>76</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>77</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>性别</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>42</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>姓名</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>114</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>年龄</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="modalityLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>48</x>
+        <y>149</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>模态</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>7</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>序号</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="IDLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>49</x>
+        <y>4</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="timeLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>49</x>
+        <y>186</y>
+        <width>113</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>188</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>时间</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="widget_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>181</x>
+       <y>-4</y>
+       <width>101</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="queryButtonSQL">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>111</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>查询</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteButtonSQL">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>39</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="modifyButtonSQL">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>75</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>修改</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addButtonSQL">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>3</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>增加</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clearButtonSQL">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>146</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>清空</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showAllTableButtonSQL">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>184</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>显示全表</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>12</x>
+      <y>10</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DICOM数据中基本信息：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>212</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>以下各项支持数据库操作！</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
